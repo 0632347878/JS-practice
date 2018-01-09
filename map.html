@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // Durations are in minutes
+    var tasks = [
+      {
+        'name'     : 'Write for Envato Tuts+',
+        'duration' : 120
+      },
+      {
+        'name'     : 'Work out',
+        'duration' : 60
+      },
+      {
+        'name'     : 'Procrastinate on Duolingo',
+        'duration' : 240
+      }
+    ];
+
+    //// Case forEach
+    // var task_names = [];
+    //
+    // tasks.forEach(function (task) {
+    //   task_names.push(task.name);
+    // });
+
+    //// Case map
+    // var task_names = tasks.map(function (task, index, array) {
+    //       return task.name;
+    // });
+    //// end Case map
+
+    //// Case map arrow function
+    // var task_names = tasks.map((task) => task.name );
+    //// end Case map arrow function
+
+
+    // custom function map
+
+    var map = function (array, callback) {
+
+      var new_array = [];
+
+      array.forEach(function (element, index, array) {
+         new_array.push(callback(element));
+      });
+      return new_array;
+
+    };
+
+      var task_names = map(tasks, function (task) {
+        return task.name;
+      });
+
+    // end custom function map
+    console.log(task_names);
+
+  </script>
+</body>
+</html>

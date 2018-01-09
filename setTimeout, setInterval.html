@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="output"></p>
+  <button onclick="clear()" id="stop">stop timer</button>
+  <button id="start">start</button>
+  <script>
+
+  // case1 setTimeout
+
+  // window.onload = function() {
+  //   setTimeout(showMessage, 5000);
+  //
+  //   function showMessage() {
+  //     alert('Yo');
+  //   }
+  // }
+
+  //case2 setTimeout
+
+  // setTimeout(function(){
+  //   alert('Yo');
+  // }, 5000)
+
+
+  //   setInterval & clearInterval
+
+  window.addEventListener('DOMContentLoaded', function() {
+
+    var counter = 0;
+    var outerElem = document.getElementById('output');
+    var stopTimer = document.getElementById('stop');
+    var startTimer = document.getElementById('start');
+
+    function count() {
+      counter++;
+      outerElem.innerHTML = counter;
+    }
+
+    var timer = setInterval( count, 1000 );
+
+    stopTimer.onclick =  function () {
+     console.log(timer);
+     clearInterval(timer);
+    }
+    start.onclick =  function () {
+    timer = setInterval( count, 1000 );
+    }
+  });
+
+
+  </script>
+</body>
+</html>
