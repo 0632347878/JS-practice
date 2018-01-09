@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Durations are in minutes
+    var tasks = [
+      {
+
+        'name': 'Write for Envato Tuts+',
+
+        'duration': 120
+
+      },
+
+      {
+
+        'name': 'Work out',
+
+        'duration': 60
+
+      },
+
+      {
+
+        'name': 'Procrastinate on Duolingo',
+
+        'duration': 240
+
+      }
+
+    ];
+
+    // filter with forEach
+    // var difficult_tasks = [];
+    //
+    // tasks.forEach(function (task) {
+    //     if (task.duration >= 120) {
+    //         difficult_tasks.push(task);
+    //     }
+    // });
+    // end filter with forEach
+
+    // with  filter
+    // var difficult_tasks = tasks.filter(function (task) {
+    //   return task.duration >= 120;
+    // });
+
+    // Using ES6
+      // var difficult_tasks = tasks.filter((task) => task.duration >= 120 );
+    // with  filter
+    console.log(difficult_tasks);
+  </script>
+</body>
+
+</html>
